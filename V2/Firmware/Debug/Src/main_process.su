@@ -1,0 +1,9 @@
+main_process.c:35:6:main_process	24	static
+main_process.c:73:6:Toggle_Led	8	static
+main_process.c:94:6:HAL_ADC_ConvHalfCpltCallback	16	static
+main_process.c:105:6:HAL_ADC_ConvCpltCallback	16	static
+main_process.c:116:6:HAL_ADC_ErrorCallback	16	static
+main_process.c:122:6:HAL_DAC_DMAUnderrunCallbackCh1	16	static
+main_process.c:127:6:HAL_DAC_ConvCpltCallbackCh1	16	static
+main_process.c:131:6:HAL_DAC_ErrorCallbackCh1	16	static
+main_process.c:137:6:vApplicationMallocFailedHook	4	static

@@ -1,0 +1,16 @@
+config_commands.c:117:10:null_func	0	static
+config_commands.c:121:10:cmd_init	0	static
+config_commands.c:128:10:cmd_set_gain	8	static
+config_commands.c:137:10:enable_vco	8	static
+config_commands.c:150:10:cmd_set_ramp_length	32	static
+config_commands.c:207:10:cmd_dac_set_voltage	32	static
+config_commands.c:170:10:cmd_set_ramp_bw	24	static
+config_commands.c:188:10:cmd_set_ramp_voltages	32	static
+config_commands.c:234:10:cmd_new_ramp	8	static
+config_commands.c:243:10:cmd_add_points_ramp	40	dynamic
+config_commands.c:256:10:cmd_set_ramp	40	static
+config_commands.c:277:10:cmd_get_power	8	static
+config_commands.c:29:17:new_command_data	8	static
+config_commands.c:38:10:remove_command_data	8	static
+config_commands.c:49:10:select_command	16	static
+config_commands.c:90:10:execute_command	16	static

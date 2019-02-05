@@ -1,0 +1,9 @@
+config_ramp.c:82:10:set_ramp_length.part.0	48	static
+config_ramp.c:10:10:init_ramp	56	static
+config_ramp.c:20:10:set_ramp_voltages	48	static
+config_ramp.c:50:10:set_ramp_bw	48	static
+config_ramp.c:82:10:set_ramp_length	8	static
+config_ramp.c:120:10:new_ramp	16	static
+config_ramp.c:131:10:add_points_ramp	12	static
+config_ramp.c:144:10:check_modulation_ok	0	static
+config_ramp.c:153:10:set_modulation	24	static

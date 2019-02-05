@@ -1,0 +1,4 @@
+protocol.c:5:11:packet_allocate	24	static
+protocol.c:13:6:packet_encode	32	static
+protocol.c:33:6:decoder_initialise	16	static
+protocol.c:38:11:packet_decode	40	static

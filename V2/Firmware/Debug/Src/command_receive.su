@@ -1,0 +1,5 @@
+command_receive.c:9:15:create_input_data	24	static
+command_receive.c:26:10:remove_input_data	16	static
+command_receive.c:39:10:get_new_data	40	static
+command_receive.c:96:10:check_newline	32	static
+command_receive.c:147:10:buffer_put	24	static

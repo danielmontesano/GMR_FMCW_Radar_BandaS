@@ -1,0 +1,17 @@
+config_commands.c:33:17:new_command_data	16	static
+config_commands.c:42:10:remove_command_data	16	static
+config_commands.c:53:10:select_command	16	static
+config_commands.c:96:10:execute_command	24	static
+config_commands.c:123:10:null_func	16	static
+config_commands.c:127:10:cmd_init	16	static
+config_commands.c:134:10:cmd_set_ramp_length	24	static
+config_commands.c:154:10:cmd_set_ramp_bw	24	static
+config_commands.c:172:10:cmd_set_ramp_voltages	24	static
+config_commands.c:191:10:cmd_dac_set_voltage	32	static
+config_commands.c:217:10:cmd_new_ramp	24	static
+config_commands.c:226:10:cmd_add_points_ramp	64	dynamic
+config_commands.c:239:10:cmd_set_ramp	16	static
+config_commands.c:260:10:cmd_enable_device	24	static
+config_commands.c:285:10:cmd_demod_set_gain	24	static
+config_commands.c:294:10:cmd_demod_set_filter	24	static
+config_commands.c:303:10:cmd_get_power	56	static

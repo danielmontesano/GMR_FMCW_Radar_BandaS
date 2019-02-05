@@ -1,0 +1,5 @@
+demod.c:9:6:init_demod	16	static
+demod.c:18:6:demod_set_gain	32	static
+demod.c:34:6:demod_set_filter	24	static
+demod.c:43:6:demod_enable_fast_gain	24	static
+demod.c:53:6:demod_enable_att	24	static

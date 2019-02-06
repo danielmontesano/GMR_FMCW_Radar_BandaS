@@ -1,7 +1,7 @@
-function [] = lineal_ramp(fmin,fmax,time,ser)
+function [total_length] = lineal_ramp(fmin,fmax,time,ser)
 
 % Genera una rampa lineal en frecuencia compensando la curva de tuning del VCO.
-% Se le especifica la banda de frecuencia y el tiempo, ademas del objeto serial
+% Se le especifica los limites de la banda de frecuencia [Hz] y el tiempo [s], ademas del objeto serial
 % del microcontrolador.
 
 fall = 0.05; %porcentaje del tiempo de caida de la rampa
@@ -25,6 +25,7 @@ grid on;
 %% Calculo de rampa de subida
 n_muestras = time*1e6; %La frecuencia de muestreo del DAC es fija a 1 MSPS.
 fall_m = floor(n_muestras*fall); %Numero de muestras de rampa de bajada
+total_length = n_muestras+fall_m;
 deseados = linspace(fmin, fmax, n_muestras); %Se obtiene la rampa en frecuencia deseada
 % int_deseados = spline(freq, valores, deseados);
 int_deseados = interp1(freq, valores, deseados); %Se obtiene la rampa en tension linearizada en el rango de frecuencias deseado y numero de muestras deseadas
@@ -37,6 +38,7 @@ int_deseados = [int_deseados caida];
 figure, plot(int_deseados*g)% Se representa la rampa en tension que se cargara al micro
 title('Rampa generada en tensión'),xlabel('Time (\mus)'),ylabel('Voltage (V)')
 points = floor(int_deseados);%El micro solo acepta valores enteros.
-set_ramp(ser, points, n_muestras+fall_m); %Se cargan los datos al micro.
+set_ramp(ser, points, total_length); %Se cargan los datos al micro.]
+
 end
 

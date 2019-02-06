@@ -1,20 +1,25 @@
+%Script para procesar los datos doppler capturados con captura_datos.m. 
+%Genera un espectrograma. Puede llenar la RAM con capturas muy largas.
+
 clear, close all
-file = fopen('C:\Users\luisg\Desktop\capturas radar\data-19-Dec-2018-11-46.txt', 'r');
-% file = fopen('/Users/danielmontesano/Library/Mobile Documents/com~apple~CloudDocs/Universidad/Radar2.5/Capturas/data-19-Dec-2018-11-46.txt', 'r');
-
-
-buffer = [];
+file = fopen('data-19-Dec-2018-11-46.txt', 'r');
 
 c = 3e8;
 Fs = 2e6;
-Ts = 1000e-6;
-time = 0.1;
+Fo = 3.292e9; %Frecuencia de onda continua configurada
+Ts = 1000e-6; %Duracion de la FFT, que se representara en columnas en el espectrograma
+time = 0.1; %Tiempo de captura
+maximum_frequency_to_show = 10000; % [Hz] Recorte en frecuencia
+factor_doppler = (c/(2*Fo))*3.6; %Para pasar de frecuencia doppler a km/h
+
+limit_pot = [-90 -40]; %limite de potencia para la representacion del espectrograma
 n_rampas = floor(time/Ts);
-points = 2^(nextpow2(time*Fs)+2);
+fft_points = 2^(nextpow2(time*Fs)+2);
 
 packet_size = Ts*Fs*2 + 10; %10 es el tamaño de la cabecera de los paquetes
 k = 1;
 data_fft = [];
+buffer = [];
 % while ~feof(file)
 while k<50
     %     flushinput(ser);
@@ -48,21 +53,21 @@ while k<50
     window = blackmanharris(size(data_IQ,2));
     window = window./sum(window);
     data_window = window'.*(data_IQ);
-    data_fft(:,k) = fftshift(fft(data_window,points));
+    data_fft(:,k) = fftshift(fft(data_window,fft_points));
     k = k+1
 end
 fclose(file);
 figure
-%%
-maximum_frequency_to_show = 10000; % [Hz]
-maximum_bin = ceil(maximum_frequency_to_show*points/Fs);
+
+%% Representacion espectrograma
+maximum_bin = ceil(maximum_frequency_to_show*fft_points/Fs);
 data_power = 20*log10(abs(data_fft))+30-10*log10(50);
 xAxis = linspace(0,(k-1)*time,k-1);
-% yAxis = linspace(-Fs/2, Fs/2, points)*3e8/2/3.292e9*3.6; % Eje de velocidad
-yAxis = linspace(-Fs/2, Fs/2, points);
-pcolor(xAxis, yAxis(points/2-maximum_bin:points/2+maximum_bin), data_power(points/2-maximum_bin:points/2+maximum_bin,:))
-xlabel('Tiempo(s)'), ylabel('Velocidad (Km/h)')
-caxis([-90 -40])
+ yAxis = linspace(-Fs/2, Fs/2, points)*factor_doppler; % Eje de velocidad
+% yAxis = linspace(-Fs/2, Fs/2, fft_points);
+pcolor(xAxis, yAxis(fft_points/2-maximum_bin:fft_points/2+maximum_bin), data_power(fft_points/2-maximum_bin:fft_points/2+maximum_bin,:))
+xlabel('Tiempo (s)'), ylabel('Velocidad (Km/h)')
+caxis(limit_pot)
 colormap jet
 shading flat
 colorbar

@@ -18,7 +18,7 @@ Fs = 2e6;
 %% Configuracion
 
 fprintf(ser, 'setramplength %d\n', floor(Ts/1e-6));
-fprintf(ser, 'setvoltage %d\n',freq/g); %Frecuencia fija
+fprintf(ser, 'setvoltage %d\n',flor(freq/g)); %Frecuencia fija
 fprintf(ser,'enabledevice 0 %d\n', 1) %VCO
 fprintf(ser,'enabledevice 4 %d\n', 1) %DEMOD
 fprintf(ser,'setgain 40\n') 

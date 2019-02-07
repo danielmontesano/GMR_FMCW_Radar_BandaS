@@ -3,9 +3,9 @@ clc, close all
 delete(instrfindall)
 
 %% Configuracion 
-fmin = 1.6e9; %[Hz]
-fmax = 3.2e9; %[Hz]
-Ts = 1e-3; %[s]
+fmin = 2e9; %[Hz]
+fmax = 2.6e9; %[Hz]
+Ts = 1000e-6; %[s]
 Gain = 20; %[dB] Ganancia del mezclador 
 
 % % ser = serial('COM3', 'InputBufferSize', 1e6); %Windows

@@ -4,8 +4,8 @@ clc, clear, close all
 delete(instrfindall)
 
 %% Apertura de puerto serie
-ser = serial('COM3', 'InputBufferSize', 2e6); %WINDOWS
-% ser = serial('/dev/tty.usbmodemFD121', 'InputBufferSize', 2e6); %MAC
+% ser = serial('COM3', 'InputBufferSize', 2e6); %WINDOWS
+ser = serial('/dev/tty.usbmodemFA131', 'InputBufferSize', 2e6); %MAC
 fclose(ser)
 fopen(ser)
 
@@ -18,7 +18,7 @@ Fs = 2e6;
 %% Configuracion
 
 fprintf(ser, 'setramplength %d\n', floor(Ts/1e-6));
-fprintf(ser, 'setvoltage %d\n',flor(freq/g)); %Frecuencia fija
+fprintf(ser, 'setvoltage %d\n',floor(freq/g)); %Frecuencia fija
 fprintf(ser,'enabledevice 0 %d\n', 1) %VCO
 fprintf(ser,'enabledevice 4 %d\n', 1) %DEMOD
 fprintf(ser,'setgain 40\n') 

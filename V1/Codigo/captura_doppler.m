@@ -10,14 +10,14 @@ time = 0.5;
 g=3.3/2^12; %El rango del DAC de 12 bits es 3.3 V 
 fft_points = 2^21; %Zero padding
 
-ser = serial('COM3', 'InputBufferSize', 2e6); %Windows
-% ser = serial('/dev/tty.usbmodemFD121', 'InputBufferSize', 2e6); %Mac/Linux
+% ser = serial('COM3', 'InputBufferSize', 2e6); %Windows
+ ser = serial('/dev/cu.usbmodemFA131', 'InputBufferSize', 2e6); %Mac/Linux
 fclose(ser)
 fopen(ser)
 fprintf(ser, 'init 1\n') %Iniciar generacion de rampa
 fprintf(ser, 'envco 1\n')%Habilitar VCO
 fprintf(ser, 'setramplength %d\n', floor(Ts/1e-6));
-fprintf(ser, 'setvoltage %d\n',flor(Fo/g)); %Frecuencia fija
+fprintf(ser, 'setvoltage %d\n',floor(Fo/g)); %Frecuencia fija
 flushinput(ser);
 buffer = [];
 

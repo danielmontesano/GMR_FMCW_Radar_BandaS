@@ -4,26 +4,28 @@ clc, clear, close all
 delete(instrfindall)
 
 %% Configuracion 
-fmin = 2.25e9; %[Hz]
+fmin = 2.3e9; %[Hz]
 fmax = 2.6e9; %[Hz]
 B = fmax-fmin; % [Hz] Bandwidth
 c = 3e8;
-Ts = 1000e-6;  %[s] Tiempo de rampa
-toread = lineal_ramp(fmin,fmax,Ts,ser); %Se genera la rampa y devuelve la longitud de esta
+Ts = 950e-6;  %[s] Tiempo de rampa
 max = 1; %Cuantas rampas se va a leer
 fft_points = 2^16; %Zero padding
 xlims = [0 150];
 ylims = [-100 0];
 Fs = 2e6;
 
-ser = serial('COM3', 'InputBufferSize', 2e4); %Windows
-% ser = serial('/dev/tty.usbmodemFD121', 'InputBufferSize', 2e6); %Mac/Linux
+% ser = serial('COM3', 'InputBufferSize', 2e4); %Windows
+ser = serial('/dev/tty.usbmodemFA131', 'InputBufferSize', 2e6); %Mac/Linux
 fclose(ser)
 fopen(ser)
 fprintf(ser, 'init 1\n') %Iniciar la generacion de rampa
 fprintf(ser, 'envco 1\n') %Habilitar el VCO
 flushinput(ser);
 buffer = [];
+
+toread = lineal_ramp(fmin,fmax,Ts,ser); %Se genera la rampa y devuelve la longitud de esta
+
 
 %% Representacion
 factor = (Ts)*c/(2*B);
@@ -68,6 +70,7 @@ while 1
     set(fft_p,'XData', x, 'YData', data_power(1:end/2));
     xlim(xlims);
     ylim(ylims);
+    drawnow;
 
 end
 

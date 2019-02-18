@@ -1,2 +1,2 @@
 # Gerbers V1
-Gerbers fabricados de la primera versión del radar.
+Gerbers fabricados de la primera versión del radar. Placas de 150x70 mm diseñadas para el stackup de Eurocircuits de 4 capas con sustrato FR4. La separación entre la primera capa y la segunda ha de ser 18 µm.

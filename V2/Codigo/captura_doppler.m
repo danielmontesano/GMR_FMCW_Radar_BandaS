@@ -17,7 +17,6 @@ g=6*3.3/2^12; %El rango del DAC de 12bits es 3.3 V con un amplificador de gananc
 Fs = 2e6;
 %% Configuracion
 
-fprintf(ser, 'setramplength %d\n', floor(Ts/1e-6));
 fprintf(ser, 'setvoltage %d\n',floor(voltage_VCO/g)); %Frecuencia fija
 fprintf(ser,'enabledevice 0 %d\n', 1) %VCO
 fprintf(ser,'enabledevice 4 %d\n', 1) %DEMOD

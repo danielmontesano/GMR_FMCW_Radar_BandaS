@@ -16,7 +16,6 @@ fclose(ser)
 fopen(ser)
 fprintf(ser, 'init 1\n') %Iniciar generacion de rampa
 fprintf(ser, 'envco 1\n')%Habilitar VCO
-fprintf(ser, 'setramplength %d\n', floor(Ts/1e-6));
 fprintf(ser, 'setvoltage %d\n',floor(voltage_VCO/g)); %Frecuencia fija
 flushinput(ser);
 buffer = [];

@@ -4,7 +4,7 @@ delete(instrfindall)
 %% Configuracion
 c = 3e8;
 Ts = 1000e-6;
-Fo = 2.5e9
+voltage_VCO = 3.3; %Voltaje que se le aplica al VCO
 Fs = 2e6;
 time = 0.5;
 g=3.3/2^12; %El rango del DAC de 12 bits es 3.3 V 
@@ -17,7 +17,7 @@ fopen(ser)
 fprintf(ser, 'init 1\n') %Iniciar generacion de rampa
 fprintf(ser, 'envco 1\n')%Habilitar VCO
 fprintf(ser, 'setramplength %d\n', floor(Ts/1e-6));
-fprintf(ser, 'setvoltage %d\n',floor(Fo/g)); %Frecuencia fija
+fprintf(ser, 'setvoltage %d\n',floor(voltage_VCO/g)); %Frecuencia fija
 flushinput(ser);
 buffer = [];
 

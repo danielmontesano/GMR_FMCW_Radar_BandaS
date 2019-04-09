@@ -12,13 +12,13 @@ fopen(ser)
 c = 3e8;
 Ts = 1000e-6; %Duracion de la FFT
 time = 1; %Tiempo de captura
-freq = 3e9;
-g=6*3.3/2^12; %El rango del DAC de 12bits es 3.3 V con un amplificador de ganancia 6
+voltage_VCO=19; %Voltios que se aplica al VCO
+g=6*3.3/2^12; %El rango del DAC de 12bits es 3.3 V con un amplificador de ganancia 6. 
 Fs = 2e6;
 %% Configuracion
 
 fprintf(ser, 'setramplength %d\n', floor(Ts/1e-6));
-fprintf(ser, 'setvoltage %d\n',floor(freq/g)); %Frecuencia fija
+fprintf(ser, 'setvoltage %d\n',floor(voltage_VCO/g)); %Frecuencia fija
 fprintf(ser,'enabledevice 0 %d\n', 1) %VCO
 fprintf(ser,'enabledevice 4 %d\n', 1) %DEMOD
 fprintf(ser,'setgain 40\n') 

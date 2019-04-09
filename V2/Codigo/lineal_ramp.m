@@ -10,9 +10,10 @@ valores = vco(:,1);
 voltaje = vco(:,2);
 freq = vco(:,3)*1e9; %La medida esta en GHz
 g = 3.3/4096; %El rango del ADC son 3.3V y 12 bits.
-
+Fs = 500e3;%La frecuencia de muestreo del DAC es fija a 500 KSPS.
 
 %% Representacion curva VCO
+figure;
 plot(valores, freq, 'x') % curva del tuning del VCO medida
 int_valores = 20:0.5:4095;
 int_freq = spline(valores, freq, int_valores); %Se interpola para sacar mas puntos
@@ -23,7 +24,7 @@ xlabel('Valor DAC'),ylabel('Frecuencia (GHz)'),
 grid on;
 
 %% Calculo de rampa de subida
-n_muestras = time*1e6; %La frecuencia de muestreo del DAC es fija a 1 MSPS.
+n_muestras = time*Fs; 
 fall_m = floor(n_muestras*fall); %Numero de muestras de rampa de bajada
 total_length = n_muestras+fall_m;
 deseados = linspace(fmin, fmax, n_muestras); %Se obtiene la rampa en frecuencia deseada
@@ -35,10 +36,10 @@ legend('Medido', 'Total', 'Deseado', 'Location','SouthEast')
 %% Calculo de rampa de bajada
 caida = linspace(max(int_deseados), min(int_deseados), fall_m); %Se calcula la rampa de bajada en linear en tension.
 int_deseados = [int_deseados caida];
-figure, plot(int_deseados*g)% Se representa la rampa en tension que se cargara al micro
+figure, plot(linspace(0,length(int_deseados)/Fs,length(int_deseados)),int_deseados*g)% Se representa la rampa en tension que se cargara al micro
 title('Rampa generada en tensión'),xlabel('Time (\mus)'),ylabel('Voltage (V)')
 points = floor(int_deseados);%El micro solo acepta valores enteros.
-set_ramp(ser, points, total_length); %Se cargan los datos al micro.]
+set_ramp(ser, points, total_length); %Se cargan los datos al micro.
 
 end
 

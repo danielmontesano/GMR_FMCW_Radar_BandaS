@@ -63,7 +63,7 @@ figure
 maximum_bin = ceil(maximum_frequency_to_show*fft_points/Fs);
 data_power = 20*log10(abs(data_fft))+30-10*log10(50);
 xAxis = linspace(0,(k-1)*time,k-1);
- yAxis = linspace(-Fs/2, Fs/2, points)*factor_doppler; % Eje de velocidad
+ yAxis = linspace(-Fs/2, Fs/2, fft_points)*factor_doppler; % Eje de velocidad
 % yAxis = linspace(-Fs/2, Fs/2, fft_points);
 pcolor(xAxis, yAxis(fft_points/2-maximum_bin:fft_points/2+maximum_bin), data_power(fft_points/2-maximum_bin:fft_points/2+maximum_bin,:))
 xlabel('Tiempo (s)'), ylabel('Velocidad (Km/h)')

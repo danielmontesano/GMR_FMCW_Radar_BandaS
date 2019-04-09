@@ -1,11 +1,11 @@
 %Script que configura el radar en modo FMCW, procesando la captura y representandolos en tiempo real. 	
-clc, close all
+clc, clear all, close all
 delete(instrfindall)
 
 %% Configuracion 
-fmin = 2e9; %[Hz]
-fmax = 2.6e9; %[Hz]
-Ts = 1000e-6; %[s]
+fmin = 1.6e9; %[Hz]
+fmax = 3.2e9; %[Hz]
+Tc = 500e-6 %[s]
 Gain = 20; %[dB] Ganancia del mezclador 
 
 % % ser = serial('COM3', 'InputBufferSize', 1e6); %Windows
@@ -13,7 +13,7 @@ ser = serial('/dev/tty.usbmodemFA131', 'InputBufferSize', 2e6); %Mac/Linux
 fclose(ser)
 fopen(ser)
 
-toread = lineal_ramp(fmin,fmax,Ts,ser);
+ toread = lineal_ramp(fmin,fmax,Tc,ser);
 fprintf(ser,'enabledevice 0 %d\n', 1) %Enable VCO
 fprintf(ser,'enabledevice 4 %d\n', 1) %Enable DEMOD
 fprintf(ser,'setgain 20\n') %esto es en dB de forma aproximada, por ahora solo acepta valores enteros
@@ -23,15 +23,15 @@ fprintf(ser,'setfilter 200\n') %esto de 0 a 255, 0 es el filtro menos restrictiv
 fprintf(ser,'enabledevice 3 %d\n', 1) %Enable PA
 
 
-flushinput(ser);
 buffer = [];
 % fprintf(ser,'setvoltage %d\n', 1750)
 B = (fmax-fmin)*1e6; %Hz
 c = 3e8;
+Fs = 2e6; %Fijada a 2 MHz
 
-factor = (Ts)*c/(2*B);
+factor = (Tc)*c/(2*B);
 maxi = 50;
-toread = toread*maxi;
+
 
 %% Plot
 subplot(311)
@@ -48,8 +48,9 @@ xlabel('Distancia [m]')
 fft_points = 2^14;
 x = linspace(-2e6/2, 2e6/2, fft_points)*factor; % Eje de distancias
 % x = linspace(-2e6/2, 2e6/2, points)/1000; % Eje de frecuencias
-recorte_inicial = 0.1*Ts/2;
-recorte_final = 0.1*Ts/2;
+recorte_inicial = 0.1*Tc*Fs/2;
+recorte_final = 0.1*Tc*Fs/2;
+flushinput(ser);
 
 %% Adquisicion continua
 while 1
@@ -71,14 +72,14 @@ while 1
         packets = [packets packets_recv];
         received_packets = received_packets + length(packets_recv);
     end
-    Ts = packets(1).length/4;
+    n_samples = packets(1).length/4;
     data_read_i = extractfield(packets,'data_i')*3.3/2^12;
-    data_read_i = reshape(data_read_i, Ts, received_packets);
+    data_read_i = reshape(data_read_i, n_samples, received_packets);
     data_read_i = data_read_i(recorte_inicial:(end-recorte_final),:);
     data_read_i = data_read_i - mean(data_read_i); %Canal I
     
     data_read_q = extractfield(packets,'data_q')*3.3/2^12;
-    data_read_q = reshape(data_read_q, Ts, received_packets);
+    data_read_q = reshape(data_read_q, n_samples, received_packets);
     data_read_q = data_read_q(recorte_inicial:(end-recorte_final),:);
     data_read_q = data_read_q - mean(data_read_q); % Canal Q
 

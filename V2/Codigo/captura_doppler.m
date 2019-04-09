@@ -23,7 +23,7 @@ fprintf(ser,'enabledevice 4 %d\n', 1) %DEMOD
 fprintf(ser,'setgain 40\n') 
 fprintf(ser,'setfilter 220\n') %esto de 0 a 255, 0 es el filtro menos restrictivo
 fprintf(ser,'enabledevice 3 %d\n', 1) %PA
-flushinput(ser);
+
 buffer = [];
 
 
@@ -41,6 +41,8 @@ fft_p = plot(1, 'LineWidth', 1.2);
 title('FFT I-jQ'),xlabel('Frecuencia [Hz]')
 FFT_points = 2^21;
 x = linspace(-Fs/2, Fs/2, FFT_points); % Eje de frecuencias
+
+flushinput(ser);
 %% Adquisicion y representacion continua
 while 1
 %     flushinput(ser);

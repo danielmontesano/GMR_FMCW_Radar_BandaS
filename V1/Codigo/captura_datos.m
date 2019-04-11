@@ -14,10 +14,12 @@ time = fix(clock);
 name = sprintf('data-%s-%d-%d.txt',date,time(4:5)) %Fichero donde se guardaran los datos.
 file = fopen(name, 'w');
 
-flushinput(ser);
+
 buffer = [];
 maxi = 1000; %Numero de paquetes recibido maximo antes de escribir en el fichero.
 size_chunk = 12000; %Numero de datos leidos en puerto serie.
+pause(0.5)
+flushinput(ser);
 while 1
     packets = [];
     received_packets = 1;

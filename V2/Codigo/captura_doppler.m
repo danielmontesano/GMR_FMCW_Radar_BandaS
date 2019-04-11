@@ -42,6 +42,7 @@ title('FFT I-jQ'),xlabel('Frecuencia [Hz]')
 FFT_points = 2^21;
 x = linspace(-Fs/2, Fs/2, FFT_points); % Eje de frecuencias
 
+pause(0.5)
 flushinput(ser);
 %% Adquisicion y representacion continua
 while 1

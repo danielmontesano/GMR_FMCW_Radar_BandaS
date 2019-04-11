@@ -24,7 +24,6 @@ fprintf(ser,'enabledevice 3 %d\n', 1) %Enable PA
 
 
 buffer = [];
-% fprintf(ser,'setvoltage %d\n', 1750)
 B = (fmax-fmin)*1e6; %Hz
 c = 3e8;
 Fs = 2e6; %Fijada a 2 MHz
@@ -50,8 +49,9 @@ x = linspace(-2e6/2, 2e6/2, fft_points)*factor; % Eje de distancias
 % x = linspace(-2e6/2, 2e6/2, points)/1000; % Eje de frecuencias
 recorte_inicial = 0.1*Tc*Fs/2;
 recorte_final = 0.1*Tc*Fs/2;
-flushinput(ser);
 
+pause(0.5)
+flushinput(ser);
 %% Adquisicion continua
 while 1
 

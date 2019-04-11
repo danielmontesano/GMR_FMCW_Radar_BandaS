@@ -21,7 +21,7 @@ fclose(ser)
 fopen(ser)
 fprintf(ser, 'init 1\n') %Iniciar la generacion de rampa
 fprintf(ser, 'envco 1\n') %Habilitar el VCO
-flushinput(ser);
+
 buffer = [];
 
 toread = lineal_ramp(fmin,fmax,Ts,ser); %Se genera la rampa y devuelve la longitud de esta
@@ -39,6 +39,8 @@ fft_p = plot(1);
 x = linspace(0, Fs/2, fft_points/2)*factor;
 recorte = 0.3*time/2;
 i = 0;
+pause(0.5)
+flushinput(ser);
 %Captura continua
 while 1
     i = i+1;

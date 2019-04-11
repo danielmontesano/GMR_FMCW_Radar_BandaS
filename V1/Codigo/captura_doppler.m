@@ -17,7 +17,7 @@ fopen(ser)
 fprintf(ser, 'init 1\n') %Iniciar generacion de rampa
 fprintf(ser, 'envco 1\n')%Habilitar VCO
 fprintf(ser, 'setvoltage %d\n',floor(voltage_VCO/g)); %Frecuencia fija
-flushinput(ser);
+
 buffer = [];
 
 %% Representacion
@@ -27,7 +27,8 @@ data_p = plot(1);
 subplot(212)
 fft_p = plot(1);
 x = linspace(0, Fs/2, fft_points/2);
-
+pause(0.5)
+flushinput(ser);
 %% Captura continua
 while 1
     acc = 0;

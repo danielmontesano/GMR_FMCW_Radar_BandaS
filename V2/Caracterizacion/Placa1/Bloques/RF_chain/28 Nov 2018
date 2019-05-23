@@ -1,0 +1,19 @@
+28 Nov 2018
+
+Medidas VCO y PA
+
+Analizador EXA
+Atenuador de 10 dB a la entrada
+
+VCO alimentando PA.
+
+trace_1000. VCO y PA conectados directamente
+trace_1001. VCO y PA conectados con atenuador 5 dB
+
+se quita atenuador entrada del analizador
+
+
+cadena entera VCO PA LNA
+atenuador de 49dB a la entrada del LNA
+
+trace_1011

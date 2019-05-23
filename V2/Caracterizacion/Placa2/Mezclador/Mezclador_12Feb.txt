@@ -1,0 +1,43 @@
+12 febrero
+
+Placa 2
+
+Mezclador
+
+
+Agilent N9310 en LO. 0dbm 2.45 GHz
+Agilent MXG en RF. -45 dBm 2.45-2.453GHz
+
+Analizador EXA en salida I/Q
+
+setGain = 20
+SetBW = 200
+
+Canal I
+Trace_0026 0 a 10 MHz
+Trace_0027 0 a 1 MHz
+Trace_0028 0 a 100 kHz
+
+Canal Q
+Trace_0029 0 a 100 kHz
+Trace_0030 0 a 1 MHz
+Trace_0031 0 a 10 MHz
+
+Pruebas ganancia
+
+CanalQ
+SPAN 3 MHz.
+
+Trace_0032 Gain = 20
+Trace_0033 Gain = 40
+Trace_0034 Gain = 30
+
+setGain = 20
+Trace_0035 LO 1.5 GHz 
+Trace_0036 LO 2.5 GHz 
+Trace_0037 LO 3 GHz 
+
+Trace_0038 espectro VCO cargando con PA activo
+Trace_0039 espectro VCO cargando con 50 Ohm
+
+

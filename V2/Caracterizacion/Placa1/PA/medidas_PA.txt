@@ -1,0 +1,26 @@
+7 nov 2018.
+
+Medidas PA
+Generador: Agilent 83752A
+Analizador N9010A 44GHz.
+cables 20 cm con codos.
+
+Trace_0025: -5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del PA. conectados directamente.
+
+Placa según esquemáticos originales, sin modificaciones.
+
+Trace_0027: -5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del PA. PA activo.
+
+Trace_0028: 0 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del PA. PA activo.
+
+Trace_0030: 5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del PA. PA activo.
+
+Trace_0031: 5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del PA. PA bypass.
+
+Bobina de entrada L1 quitada.
+
+Trace_0040: -5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del PA. PA activo.
+
+Trace_0041: 0 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del PA. PA activo.
+
+Trace_0042: 5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del PA. PA activo.

@@ -1,0 +1,5 @@
+Diferencias
+
+Para diferenciar entre la placa 1 y la 2:
+Ahora mismo, la placa 2 no tiene montados los conectores SMA del LNA2.
+Ademas, en el footprint de las bobinas L3 y L4 de la placa 1 el soldermask esta raspado, mientras que en la placa 2 no.

@@ -1,0 +1,15 @@
+28 Nov 2018
+
+
+Analizador EXA
+
+Filtros IQ con demodulador
+
+generador e8257D haciendo sweep, de 1.47 a 1.48 GHz. -20dbm a RF mix. Ganancia 20 dB filtro 220 (1MHz aprox) 
+Analizador con dc block casero
+
+trace_1012 Canal I 10MHz
+trace_1013 Canal I 1MHz
+
+trace_1015 Canal Q 10MHz
+trace_1014 Canal Q 1MHz

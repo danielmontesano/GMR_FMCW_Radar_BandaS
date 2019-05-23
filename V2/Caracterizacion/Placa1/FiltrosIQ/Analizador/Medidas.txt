@@ -1,0 +1,53 @@
+Medidas filtros LF
+14 Nov 2018
+
+Generador de funciones haciendo un sweep. -10dBm de salida.
+Analizador EXA con DC block 10 uF.
+
+
+
+43. Salida generador funciones. 0 - 10 MHz.
+44. I_p 10 MHz
+45. I_p 1 MHz
+46. I_p 100 KHz
+
+47. I_n 100 khz
+48. I_n 1 MHz
+49. I_n 10 MHz
+
+50. Q_n 10 MHz
+51. Q_n 1 MHz
+52. Q_n 100 KHz
+
+53. Q_p 100 KHz
+54. Q_p 1 MHz
+55. Q_p 10 MHz
+
+
+Medidas filtros LF
+15 Nov 2018
+
+Generador de funciones haciendo un sweep. -10dBm de salida.
+Analizador EXA con DC block 10 uF.
+conectando la entrada que no se usa a masa.
+
+
+56. Q_p 10 MHz
+57. Q_p 1 MHz
+58. Q_p 100 KHz
+
+
+59. Q_n 100 KHz
+60. Q_n 1 MHz
+61. Q_n 10 MHz
+
+62. I_p 10 MHz
+63. I_p 1 MHz
+64. I_p 100 KHz
+
+65. I_n 100 khz
+66. I_n 1 MHz
+67. I_n 10 MHz
+
+Se cambian C3 C7 C9 C12 por 18 pF. C11 C10 C5 y C6 por 1nF
+

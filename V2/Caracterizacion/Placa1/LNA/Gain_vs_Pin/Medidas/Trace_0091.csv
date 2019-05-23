@@ -1,0 +1,50 @@
+MeasResult
+Swept SA
+A.16.09,N9010A
+544 B25 B40 EXM FS1 MPB P44 RTL ,01
+Result Type,Marker Table
+Ref Level,23
+Number of Points,1001
+Sweep Time,0.0072
+Start Frequency,1400000000
+Stop Frequency,3600000000
+Average Count,0
+Average Type,LogPower(Video)
+RBW,100000
+RBW Filter,Gaussian
+RBW Filter BW,3dB
+VBW,1000000
+Sweep Type,Swept
+X Axis Scale,Lin
+PreAmp State,Off
+PreAmp Band,Low
+Trigger Source,Free
+Trigger Level,1.2
+Trigger Slope,Positive
+Trigger Delay,0
+Phase Noise Optimization,Fast
+Swept If Gain,Low
+FFT If Gain,Autorange
+RF Coupling,DC
+FFT Width,411900
+Ext Ref,10000000
+Input,RF
+RF Calibrator,Off
+Attenuation,40
+Ref Level Offset,0
+External Gain,0
+Y Axis Units,dBm
+DATA
+MKR,MODE,TRC,SCL,X,Y,FUNCTION,FUNCTION WIDTH,FUNCTION VALUE,FUNCTION UNIT
+1,Normal,1,Frequency,1.4990E+009,13.967,Off,0.0000E+000,0,None
+2,Normal,1,Frequency,2.5000E+009,12.652,Off,0.0000E+000,0,None
+3,Normal,1,Frequency,3.5010E+009,8.408,Off,0.0000E+000,0,None
+4,Off,1,Frequency,0.0000E+000,0,Off,0.0000E+000,0,None
+5,Off,1,Frequency,0.0000E+000,0,Off,0.0000E+000,0,None
+6,Off,1,Frequency,0.0000E+000,0,Off,0.0000E+000,0,None
+7,Off,1,Frequency,0.0000E+000,0,Off,0.0000E+000,0,None
+8,Off,1,Frequency,0.0000E+000,0,Off,0.0000E+000,0,None
+9,Off,1,Frequency,0.0000E+000,0,Off,0.0000E+000,0,None
+10,Off,1,Frequency,0.0000E+000,0,Off,0.0000E+000,0,None
+11,Off,1,Frequency,0.0000E+000,0,Off,0.0000E+000,0,None
+12,Off,1,Frequency,0.0000E+000,0,Off,0.0000E+000,0,None

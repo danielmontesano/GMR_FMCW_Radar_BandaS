@@ -1,0 +1,28 @@
+7 Nov 2018
+Placa según esquemáticos originales, sin modificaciones.
+
+Medidas LNA
+Generador: Agilent 83752A
+Analizador N9010A 44GHz.
+cables 20 cm con codos.
+
+Trace_0025: -5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la entrada del analizador. conectados directamente.
+
+Trace_0032: -20 dBm de Pin, de 10 MHz a 4 Ghz. Atenuador 10 dB a la salida del LNA2. LNA2 activo.
+
+Trace_0033: -5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del LNA2. LNA2 activo.
+
+Trace_0034: 5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del LNA2. LNA2 activo.
+
+Trace_0035: 5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del LNA2. LNA2 apagado.
+
+
+
+Trace_0039: -20 dBm de Pin, de 10 MHz a 4 Ghz. Atenuador 10 dB a la salida del LNA1. LNA1 activo.
+
+Trace_0038: -5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del LNA1. LNA1 activo.
+
+Trace_0037: 5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del LNA1. LNA1 activo.
+
+Trace_0036: 5 dBm de Pin, de 10 MHz a 6 Ghz. Atenuador 10 dB a la salida del LNA1. LNA1 apagado.
+

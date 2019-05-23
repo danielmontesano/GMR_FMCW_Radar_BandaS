@@ -1,0 +1,21 @@
+28 Nov 2018
+
+
+Medidas VCO y PA
+
+Analizador EXA
+
+se quita atenuador entrada del analizador
+
+trace_1002. espectro VCO. maximo barrido.
+
+trace_1003. tono a 0v 1.47 GHz
+trace_1004. tono a 4094v
+trace_1005. tono a 2000v
+trace_1006. tono a 1000v
+
+
+2.124 GHz
+1.47 GHz
+2.124 GHz
+3.29 GHz

@@ -1,0 +1,10 @@
+28 Nov 2018
+
+Medidas VNA
+
+ 0dBm. calibracion guardada de 45MHz a 6 GHz.
+1. MixRF_MixLO = puerto 1 en RF y puerto 2 en LO. 0dBm.
+2.MixRF = puerto 1 en RF. VCO conectado a LO en 1500 MHz (0V)
+3. Splitter = puerto1 en vco_out1. puerto 2 en vco_pout2. VCO apagado.
+4. LNA1 (ya que se habia arreglado el conector.)
+

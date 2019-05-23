@@ -1,0 +1,11 @@
+LNA
+14 Nov
+
+generador E8257D de 1 a 5 GHz con -30 dBm
+
+Se hacen tras haber resollado un conector del LNA1.
+
+40 LNA1
+41 LNA2
+42 Cables directamente
+

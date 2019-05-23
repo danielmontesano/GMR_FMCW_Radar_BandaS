@@ -1,0 +1,24 @@
+Pruebas 13-12-2018
+-Señal de tuning generada con la placa cortada y puesta directamente al opamp. Alimentaciones sin cambiar. Tono en aprox 2.4GHz (1550) MeasR_0008
+
+-Señal de tuning generada con la placa cortada y puesta al filtro RC de antes del opamp. Alimentaciones sin cambiar. Tono en aprox 2.4GHz (1550) MeasR_0010
+
+-Señal de tuning generada con la placa cortada y puesta directamente al filtro RC sin el op amp. Tono en aprox 1.6GHz (1550) MeasR_0011 y 12? (probar quick save)
+-Señal de tuning generada con la placa cortada y puesta directamente al filtro RC sin el op amp. Tono en aprox 1.6GHz (1550) MeasR_0013
+
+-Señal de tuning generada internamente y puesta directamente al filtro RC sin el op amp. Quitado regulador de 24 V. Tono en aprox 1.6GHz (1550) MeasR_0014
+
+-Señal de tuning generada internamente y puesta directamente al filtro RC sin el op amp. Quitado regulador de 5 y 24 V. Tono en aprox 1.6GHz (1550) MeasR_0014
+ Se alimenta el VCO y el micro con una fuente E3631A.
+-Alimentaciones quitadas tuning con pila 1.5 V antes del filtro RC MeasR_0015
+-Alimentaciones quitadas tuning interno filtro RC en 3200 Hz MeasR_0016
+-Alimentaciones quitadas tuning interno filtro RC en 592 Hz MeasR_0017
+-Alimentaciones quitadas tuning interno filtro RC en 592 Hz y software cambiado para poner un valor continuo MeasR_0019 
+-Alimentaciones quitadas tuning interno filtro RC en 592 Hz alimentado micro con 2 pilas AA y software cambiado MeasR_0020 y 21
+
+Fecha 20/12/2018
+-Sistema final con filtro RC en 200 kHz MeasR_0022
+
+-Placa antigua MeasR_0024
+-Placa antigua con tuning de la placa nueva MeasR_0025
+

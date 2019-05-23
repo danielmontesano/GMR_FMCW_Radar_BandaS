@@ -1,0 +1,38 @@
+11 diciembre
+
+analizador exa
+
+
+dc block 10 uF en entrada analizador
+
+generador de funciones 33250A. 62 mVpp, salida alta impedancia.
+
+trace 100 I N 10 MHz
+trace 101 I N 1 MHz
+trace 102 I N 0.1 MHz
+
+trace 105 I P 10 MHz
+trace 104 I P 1 MHz
+trace 103 I P 0.1 MHz
+
+trace 106 Q N 10 MHz
+trace 107 Q N 1 MHz
+trace 108 Q N 0.1 MHz
+
+trace 111 Q P 10 MHz
+trace 110 Q P 1 MHz
+trace 109 Q P 0.1 MHz
+
+generador RF MGX n5182A sweep RF. a 2.5 2.51GHz -40 dBm
+generador 83752A LO a 2.5GHz 0 dBm
+
+gain analizador 20 dB
+bw set to 200 (950 Mhz aprox)
+
+trace 0112 I 10 MHz
+trace 0113 I 1 MHz
+trace 0114 I 0.1 MHz
+
+trace 0117 Q 10 MHz
+trace 0116 Q 1 MHz
+trace 0115 Q 0.1 MHz

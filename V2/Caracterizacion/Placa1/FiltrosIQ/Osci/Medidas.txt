@@ -1,0 +1,19 @@
+Filtros IQ
+12 Nov 2018
+
+Condensadores C7 C4 C12 y C9 cambiados de 18nF a 18pF.
+
+Generador de funciones Agilent 33220A. 
+Oscilloscopio Agilent infinitum con sonda 10x.
+
+Se configura un voltage de salida de 1 Vpp.
+Sweep manual de 1 Hz a 10 MHz con 10 puntos por década
+Jumper de ADC en posición conexión a ADC.
+Averaging de 64 muestras en el oscilloscope. 
+
+
+
+se cambian los condensadores C11 y C10 por 6.8 nF.
+
+todas las resistencias del canal Q deberían ser 15k y son 1k5. Se cambian todas y los condensadores  C11 y C10 se vuelven a cambiar por su valor original, 3.3 nF.
+

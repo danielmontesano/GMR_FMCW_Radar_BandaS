@@ -1,0 +1,18 @@
+22 Nov 2018
+Medidas PA Pout vs Pin
+Generador de RF: 83752A
+Analizador EXA N9010A
+
+Se hacen las medidas en 3 tonos
+
+
+Potencia fijada en generador = -20 dBm
+Potencia entrada PA : (conectando el cable de entrada directamente al analizador) 
+1.5 GHz -> -20.8 dBm
+2.5 GHz -> -21.2 dBm
+3.5 Ghz -> -21.4 dBm
+
+Incluyendo el cable de salida (conectando el cable de entrada  con el de salida y  directamente al analizador)
+1.5 GHz -> -21.3 dBm
+2.5 GHz -> -21.9 dBm
+3.5 Ghz -> -22.4 dBm

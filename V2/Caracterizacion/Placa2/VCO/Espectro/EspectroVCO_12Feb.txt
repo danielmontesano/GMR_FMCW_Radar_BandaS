@@ -1,0 +1,10 @@
+12 febrero
+
+Placa 2
+
+Analizador EXA en salida PA
+
+Trace_0038 espectro VCO cargando con PA activo
+Trace_0039 espectro VCO cargando con 50 Ohm
+
+

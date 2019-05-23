@@ -1,0 +1,5 @@
+Atenuador de 6dB, RBW = 8MHz
+Con barrido de voltaje de 730 mV - 20.44 V 
+Medidas:
+- VCO
+- VCO+PA

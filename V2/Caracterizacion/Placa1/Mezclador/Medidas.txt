@@ -1,0 +1,57 @@
+Medidas mezclador
+14 nov 2018
+
+En LO se usa el generador E8257D
+En RF se usa el generador 83752A
+
+LO tono a 2.5 GHz con 0dBm
+RF sweep a 2.5 a 2.510 GHz con -40dBm
+
+Midiendo en Q_n
+
+1. gain a 41 y filter a 255
+2. gain a 41 y filter a 225
+3. gain a 41 y filter a 195
+4. gain a 41 y filter a 165
+5. gain a 41 y filter a 135
+6. gain a 41 y filter a 105
+20. gain a 41 y filter a 75
+21. gain a 41 y filter a 45
+22. gain a 41 y filter a 15
+23. gain a 41 y filter a 0
+
+RF sweep a 2.5 a 2.503 GHz con -40dBm
+
+7. gain a 41 y filter a 220
+8. gain a 35 y filter a 220
+9. gain a 30 y filter a 220
+10. gain a 25 y filter a 220
+11. gain a 20 y filter a 220
+12. gain a 17 y filter a 220
+
+
+
+13. gain a 30 y filter a 220. LO tono a 2.5 GHz con -10dBm
+14. gain a 30 y filter a 220. LO tono a 2.5 GHz con -20dBm
+15. gain a 30 y filter a 220. LO tono a 2.5 GHz con -30dBm
+16. gain a 30 y filter a 220. LO tono a 2.5 GHz con +5dBm
+
+
+
+17. Q_p gain a 30 y filter a 220. LO tono a 2.5 GHz con +0 dBm
+18. I_n gain a 30 y filter a 220. LO tono a 2.5 GHz con +0 dBm
+19. I_pgain a 30 y filter a 220. LO tono a 2.5 GHz con +0 dBm
+
+
+24. gain a 41 y filter a 220
+LO tono a 1.5 GHz con 0dBm
+RF sweep a 1.5 a 1.503 GHz con -40dBm
+25. gain a 41 y filter a 220
+LO tono a 2 GHz con 0dBm
+RF sweep a 2 a 2.003 GHz con -40dBm
+26. gain a 41 y filter a 220
+LO tono a 3 GHz con 0dBm
+RF sweep a 3 a 3.003 GHz con -40dBm
+27. gain a 41 y filter a 220
+LO tono a 3.5 GHz con 0dBm
+RF sweep a 3.5 a 3.503 GHz con -40dBm

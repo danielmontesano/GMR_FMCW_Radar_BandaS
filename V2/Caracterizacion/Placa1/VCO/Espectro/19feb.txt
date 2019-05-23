@@ -1,0 +1,7 @@
+
+Analizador EXA. Conectado cable flexible 10cmm.
+
+trace 0026. vco directamente a analizador. cargando el otro puerto del splitter con una carga SMA de 50ohm.
+
+
+

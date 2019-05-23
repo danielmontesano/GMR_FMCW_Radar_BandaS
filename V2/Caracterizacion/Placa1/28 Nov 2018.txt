@@ -1,0 +1,52 @@
+28 Nov 2018
+
+Medidas VNA
+
+ 0dBm. calibracion guardada de 45MHz a 6 GHz.
+1. MixRF_MixLO = puerto 1 en RF y puerto 2 en LO. 0dBm.
+2.MixRF = puerto 1 en RF. VCO conectado a LO en 1500 MHz (0V)
+3. Splitter = puerto1 en vco_out1. puerto 2 en vco_pout2. VCO apagado.
+4. LNA1 (ya que se habia arreglado el conector.)
+
+Medidas VCO y PA
+
+Analizador EXA
+Atenuador de 10 dB a la entrada
+
+VCO alimentando PA.
+
+trace_1000. VCO y PA conectados directamente
+trace_1001. VCO y PA conectados con atenuador 5 dB
+
+se quita atenuador entrada del analizador
+
+trace_1002. espectro VCO. maximo barrido.
+
+trace_1003. tono a 0v
+trace_1004. tono a 4094v
+trace_1005. tono a 2000v
+trace_1006. tono a 1000v
+
+ruido de fase
+
+trace_1007. tono a 2.124 GHz
+trace_1008. tono a 1.47 GHz
+trace_1009. tono a 2.124 GHz
+trace_1010. tono a 3.29 GHz
+
+cadena entera VCO PA LNA
+atenuador de 49dB a la entrada del LNA
+
+trace_1011
+
+
+Filtros IQ con demodulador
+
+generador e8257D haciendo sweep, de 1.47 a 1.48 GHz. -20dbm a RF mix.
+Analizador con dc block casero
+
+trace_1012 Canal I 10MHz
+trace_1013 Canal I 1MHz
+
+trace_1015 Canal Q 10MHz
+trace_1014 Canal Q 1MHz

@@ -1,0 +1,11 @@
+
+Parámetros S: -20 dBm de potencia y con atenuador de 10 dB al puerto 2.
+- Medida 2.1 : Placa 2, salida directa del HPA.
+- Medida 2.2: Placa 2, salida acoplada.
+- Medida 2.3: Placa 2, LNA
+- Medida 2.4: Placa 2, entrada del mezclador (SÓLO SE TIENE EN CUENTA EL S22 DE TODOS LOS MEDIDOS porque se midió con el puerto 2)
+- Medida 2.5: Placa 2, salida del mezclador (SÓLO SE TIENE EN CUENTA EL S22 DE TODOS LOS MEDIDOS porque se midió con el puerto 2)
+
+- Medida 1.1 : Placa 1, salida directa del HPA.
+- Medida 1.2 : Placa 2, salida del mezclador (SÓLO SE TIENE EN CUENTA EL S22 DE TODOS LOS MEDIDOS porque se midió con el puerto 2)
+

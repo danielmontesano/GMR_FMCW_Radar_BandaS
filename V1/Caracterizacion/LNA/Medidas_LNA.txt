@@ -1,0 +1,10 @@
+Pin_pout
+	p = potencia de entrada restada la atenuaci—n cable de 0.7db. de -80:10:-30 y -30:2:0 dB
+	f2300 = potencia de salida restada la atenuaci—n de 1db con un tono a 2.3ghz
+	f4500 = potencia de salida restada la atenuaci—n de 1db con un tono a 2.45ghz
+	f2600 = potencia de salida restada la atenuaci—n de 1db con un tono a 2.6ghz
+
+
+wifi_apagado
+En el laboratorio no hay ningœn dispositivo inal‡mbrico encendido. El dispositivo mas cercano se encuentra en otra habitaci—n, a unos 10m. 
+

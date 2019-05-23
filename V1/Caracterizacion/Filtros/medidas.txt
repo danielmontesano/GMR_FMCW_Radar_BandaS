@@ -1,0 +1,5 @@
+Medidas a la entrada de los filtros y en ambos test points, el csv desp tiene los datos del ultimo testpoint.
+
+A la entrada se han puesto 100mV, 0 VDC y 200KHz
+
+El amplificador estaba configurado a x10

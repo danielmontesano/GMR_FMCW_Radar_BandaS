@@ -1,0 +1,19 @@
+load('ruido.mat')
+
+figure; hold on;
+f_adc = linspace(0,2e6/2,size(RuidoADC));
+fftADC = 20*log10(abs(fft(RuidoADC)));
+
+f_lna = linspace(0,2e6/2,size(RuidoLNA));
+fftLNA = 20*log10(abs(fft(RuidoLNA)));
+
+f_mix = linspace(0,2e6/2,size(RuidoMIX));
+fftMIX = 20*log10(abs(fft(RuidoMIX)));
+
+fftOsci = 20*log10(abs(fft(RuidoOsci(:,2))));
+
+plot();
+plot(f_adc,fft_adc();
+plot(10*log10(abs(fft(RuidoLNA))));
+plot(10*log10(abs(fft(RuidoOsci(:,2)))));
+legend('ADC','MIX','LNA','Osci')
